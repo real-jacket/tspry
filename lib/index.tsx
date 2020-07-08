@@ -1,6 +1,5 @@
-console.log('hello world ++++++ ---')
+import React from 'react'
+import ReactDom from 'react-dom'
+import Button from './button'
 
-const div = document.createElement('div')
-div.innerText = 'this is a div...'
-
-document.body.appendChild(div)
+ReactDom.render(<Button />, document.getElementById('root'))
