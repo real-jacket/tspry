@@ -22,6 +22,10 @@ module.exports = {
 				test: /\.tsx?$/,
 				loader: 'awesome-typescript-loader',
 			},
+			{
+				test: /\.svg$/,
+				use: ['svg-sprite-loader', 'svg-transform-loader', 'svgo-loader'],
+			},
 		],
 	},
 }

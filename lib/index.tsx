@@ -1,5 +1,15 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import Button from './button'
+import Icon from './Icon'
 
-ReactDom.render(<Button />, document.getElementById('root'))
+function App() {
+	return (
+		<>
+			<Icon name='wechat'></Icon>
+			<Icon name='qq'></Icon>
+			<Icon name='alipay'></Icon>
+		</>
+	)
+}
+
+ReactDom.render(<App />, document.getElementById('root'))
