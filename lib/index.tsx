@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 import ReactDom from 'react-dom'
 import Icon from './Icon'
 
 function App() {
+	const fn: MouseEventHandler<SVGElement> = (e) => {
+		console.log(e)
+		console.log(e.target)
+	}
 	return (
 		<>
-			<Icon name='wechat'></Icon>
-			<Icon name='qq'></Icon>
-			<Icon name='alipay'></Icon>
+			<Icon name='wechat' onClick={fn}></Icon>
 		</>
 	)
 }

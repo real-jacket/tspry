@@ -7,11 +7,13 @@ import './icon.scss'
 
 interface IconProps {
 	name: string
+	onClick: React.MouseEventHandler<SVGElement>
 }
 
 const Icon: React.FunctionComponent<IconProps> = (props) => {
+	const { name, ...resetProps } = props
 	return (
-		<svg className='icon'>
+		<svg className='icon' {...resetProps}>
 			<use xlinkHref={`#${props.name}`} />
 		</svg>
 	)
