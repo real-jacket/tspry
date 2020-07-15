@@ -9,7 +9,17 @@ function App() {
 	}
 	return (
 		<>
-			<Icon name='wechat' onClick={fn}></Icon>
+			<Icon
+				name='wechat'
+				onClick={fn}
+				className='small'
+				onMouseEnter={() => {
+					console.log('enter')
+				}}
+				onMouseLeave={() => {
+					console.log('leave')
+				}}
+			></Icon>
 		</>
 	)
 }
