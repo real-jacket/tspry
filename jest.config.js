@@ -1,7 +1,7 @@
 module.exports = {
 	bail: 1,
 	verbose: true,
-	preset: 'ts-jest',
+	preset: 'ts-jest/presets/js-with-ts',
 	testEnvironment: 'node',
 	testMatch: ['<rootDir>/**/__tests__/**/*.test.(js|jsx|ts|tsx)'],
 	moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],

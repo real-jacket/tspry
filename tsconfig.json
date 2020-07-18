@@ -23,6 +23,7 @@
       "es6",
       "dom"
     ],
+    "allowJs": true,
     "sourceMap": true,
     "jsx": "react",
     "moduleResolution": "node",
