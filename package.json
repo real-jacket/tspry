@@ -1,9 +1,12 @@
 {
   "name": "tspry",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "main": "dist/lib/index",
   "types": "dist/lib/index",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "jest --config jest.config.js",
     "start": "webpack-dev-server --config webpack.config.dev.js",
