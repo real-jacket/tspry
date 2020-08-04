@@ -1,7 +1,7 @@
 <h1 align="center">Tspry</h1>
 
 <p align="center">
-    <img alt="GitHub Workflow Status (branch)" src="https://github.com/real-jacket/tspry/workflows/Build/badge.svg">
+    <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/real-jacket/tspry/Build/master">
     <a href="https://codecov.io/gh/real-jacket/tspry"><img alt="Codecov" src="https://img.shields.io/codecov/c/github/real-jacket/tspry"></a>
 </p>
 

@@ -2,8 +2,6 @@ name: Tspry CI/CD
 
 on:
   push:
-    branches:
-      - master
     tags:
       - v*
   pull_request:
