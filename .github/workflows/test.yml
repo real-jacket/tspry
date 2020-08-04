@@ -1,0 +1,31 @@
+name: Test
+
+on:
+  push:
+    tags:
+      - v*
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    needs: Build
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+      - name: test
+        run: |
+          npm install
+          npm run test
+      - uses: codecov/codecov-action@v1
+        with:
+          file: ./coverage
+          flags: unittests # optional
+          name: codecov-tspry # optional
+          fail_ci_if_error: true # optional (default = false)
+
+  # Deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: Test

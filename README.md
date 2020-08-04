@@ -1,11 +1,10 @@
 <h1 align="center">Tspry</h1>
 
 <p align="center">
-    <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/real-jacket/tspry/Build/master">
+    <img alt="GitHub Workflow Status (branch)" src="https://github.com/real-jacket/tspry/workflows/Build/badge.svg">
+    <img alt="GitHub Workflow Status (branch)" src="https://github.com/real-jacket/tspry/workflows/Test/badge.svg">
     <a href="https://codecov.io/gh/real-jacket/tspry"><img alt="Codecov" src="https://img.shields.io/codecov/c/github/real-jacket/tspry"></a>
-</p>
-
-<p align="center">
+    <br>
     <a href="https://badge.fury.io/js/tspry"><img src="https://badge.fury.io/js/tspry.svg" alt="npm version"></a>
     <img alt="GitHub" src="https://img.shields.io/github/license/real-jacket/tspry?color=brightgreen">
 </p>
