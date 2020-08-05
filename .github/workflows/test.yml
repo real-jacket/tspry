@@ -21,7 +21,7 @@ jobs:
       - uses: codecov/codecov-action@v1
         if: ${{ always() }}
         with:
-          file: ./coverage
+          directory: ./coverage
           flags: unittests # optional
           name: codecov-tspry # optional
           fail_ci_if_error: true # optional (default = false)
