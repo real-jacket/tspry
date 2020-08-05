@@ -9,7 +9,7 @@ module.exports = {
 		hot: true,
 	},
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'dist/lib'),
 		library: 'tspry',
 		libraryTarget: 'umd',
 	},
