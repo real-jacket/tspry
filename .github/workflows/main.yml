@@ -17,6 +17,7 @@ jobs:
       - name: build
         run: |
           npm install
+          npm run build
       - id: publish
         uses: JS-DevTools/npm-publish@v1
         with:
