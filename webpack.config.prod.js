@@ -1,7 +1,16 @@
+const path = require('path')
 const base = require('./webpack.config')
 
 module.exports = Object.assign({}, base, {
 	mode: 'production',
+	entry: {
+		index: './lib/index.tsx',
+	},
+	output: {
+		path: path.resolve(__dirname, 'dist/lib'),
+		library: 'tspry',
+		libraryTarget: 'umd',
+	},
 	externals: {
 		react: {
 			commonjs: 'react',

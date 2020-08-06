@@ -9,8 +9,9 @@
   ],
   "scripts": {
     "test": "jest --config jest.config.js",
-    "start": "webpack-dev-server --config webpack.config.dev.js",
+    "dev": "webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
+    "doc": "webpack --config webpack.config.doc.js",
     "commit": "git-cz"
   },
   "repository": {
@@ -39,6 +40,7 @@
     "@types/node": "^14.0.14",
     "@types/react": "^16.9.41",
     "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
     "@types/react-test-renderer": "^16.9.2",
     "awesome-typescript-loader": "^5.2.1",
     "babel-jest": "^26.1.0",
@@ -51,6 +53,7 @@
     "jest": "^26.1.0",
     "jest-junit": "^11.1.0",
     "node-sass": "^4.14.1",
+    "react-router-dom": "^5.2.0",
     "react-test-renderer": "^16.13.1",
     "sass-loader": "^9.0.2",
     "style-loader": "^1.2.1",
