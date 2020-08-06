@@ -1,7 +1,8 @@
 const path = require('path')
 const base = require('./webpack.config')
+const { merge } = require('webpack-merge')
 
-module.exports = Object.assign({}, base, {
+module.exports = merge(base, {
 	mode: 'production',
 	entry: {
 		index: './lib/index.tsx',

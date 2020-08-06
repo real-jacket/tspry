@@ -9,9 +9,9 @@
   ],
   "scripts": {
     "test": "jest --config jest.config.js",
-    "dev": "webpack-dev-server --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js",
-    "doc": "webpack --config webpack.config.doc.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
+    "doc": "cross-env NODE_ENV=production webpack --config webpack.config.doc.js",
     "commit": "git-cz"
   },
   "repository": {
@@ -44,7 +44,9 @@
     "@types/react-test-renderer": "^16.9.2",
     "awesome-typescript-loader": "^5.2.1",
     "babel-jest": "^26.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "commitizen": "^4.1.2",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.6.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
@@ -52,6 +54,7 @@
     "html-webpack-plugin": "^4.3.0",
     "jest": "^26.1.0",
     "jest-junit": "^11.1.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "react-router-dom": "^5.2.0",
     "react-test-renderer": "^16.13.1",
@@ -65,7 +68,8 @@
     "typescript": "^3.9.6",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.1"
   },
   "dependencies": {
     "react": "^16.13.1",

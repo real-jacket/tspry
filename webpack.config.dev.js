@@ -1,20 +1,21 @@
 const base = require('./webpack.config')
 const path = require('path')
+const { merge } = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = Object.assign({}, base, {
+module.exports = merge(base, {
 	mode: 'development',
 	entry: {
 		index: './examples/index.tsx',
 	},
 	output: {
-		path: path.resolve(__dirname, 'doc')
+		path: path.resolve(__dirname, 'doc'),
 	},
 	devServer: {
 		contentBase: './examples',
 		hot: true,
 		open: true,
-		historyApiFallback: true
+		historyApiFallback: true,
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
