@@ -1,6 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import { Icon } from '../lib'
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom'
 import Header from './components/header'
 import routes from './routes'
 import './style.scss'
@@ -12,29 +11,27 @@ export default function BasicExample() {
 			<Router>
 				<div className='body'>
 					<div className='sidebar'>
+						<h1>组件</h1>
 						<ul>
 							<li>
-								<Link to='/'>Home</Link>
-							</li>
-							<li>
-								<Link to='/about'>About</Link>
-							</li>
-							<li>
-								<Link to='/dashboard'>Dashboard</Link>
-							</li>
-							<li>
 								<Link to='/icon'>Icon</Link>
+							</li>
+							<li>
+								<Link to='/button'>Button</Link>
+							</li>
+							<li>
+								<Link to='/dialog'>Dialog</Link>
 							</li>
 						</ul>
 					</div>
 					<div className='main'>
 						<Switch>
+							<Route exact path='/'>
+								<Redirect to='/icon' />
+							</Route>
 							{routes.map((route) => {
 								return <Route key={route.path} exact path={route.path} render={() => <route.component />} />
 							})}
-							<Route path='/icon'>
-								<Icon name='alipay' />
-							</Route>
 						</Switch>
 					</div>
 				</div>

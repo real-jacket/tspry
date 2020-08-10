@@ -14,7 +14,6 @@ module.exports = merge(base, {
 	devServer: {
 		contentBase: './examples',
 		hot: true,
-		open: true,
 		historyApiFallback: true,
 	},
 	plugins: [

@@ -11,7 +11,7 @@
     "test": "jest --config jest.config.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
-    "doc": "cross-env NODE_ENV=production webpack --config webpack.config.doc.js",
+    "build:doc": "cross-env NODE_ENV=production webpack --config webpack.config.doc.js",
     "commit": "git-cz"
   },
   "repository": {

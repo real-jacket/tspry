@@ -1,9 +1,10 @@
 import React from 'react'
+import Icon from '../../lib/icon/icon'
 
 export default function About() {
 	return (
 		<div>
-			<h2>About</h2>
+			<Icon name='wechat'></Icon>
 		</div>
 	)
 }

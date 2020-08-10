@@ -1,18 +1,18 @@
-import About from './views/about'
-import Dashboard from './views/dashboard'
-import Home from './views/home'
+import Icon from './views/icon'
+import Dialog from './views/dialog'
+import Button from './views/button'
 
 export default [
-    {
-        path: "/",
-        component: Home
-    },
-    {
-        path: "/dashboard",
-        component: Dashboard
-    },
-    {
-        path: "/about",
-        component: About
-    },
+	{
+		path: '/icon',
+		component: Icon,
+	},
+	{
+		path: '/button',
+		component: Button,
+	},
+	{
+		path: '/dialog',
+		component: Dialog,
+	},
 ]
