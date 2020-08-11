@@ -1,2 +1,43 @@
 .tspry-dialog {
+	&-mask {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: fade_out(black, 0.5);
+	}
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 600px;
+	background: white;
+	border-radius: 6px;
+	&-close {
+		position: absolute;
+		top: 25px;
+		right: -10px;
+		transform: translateY(-50%);
+		padding: 5px 10px;
+		background: red;
+	}
+	&-header {
+		height: 50px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		padding: 0 10px;
+	}
+	&-main {
+		height: 200px;
+	}
+	&-footer {
+		height: 50px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding: 0 10px;
+	}
 }
