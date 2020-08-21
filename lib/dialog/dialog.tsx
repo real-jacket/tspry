@@ -70,65 +70,55 @@ Dialog.defaultProps = {
 }
 
 const alert = (content: string) => {
-  const component = (
-    <Dialog
-      visible={true}
-      closable={true}
-      actionable={false}
-      onClose={() => {
-        ReactDOM.render(React.cloneElement(component, { visible: false }), div)
-        ReactDOM.unmountComponentAtNode(div)
-        div.remove()
-      }}
-    >
-      {content}
-    </Dialog>
-  )
-
-  const div = document.createElement('div')
-  document.body.appendChild(div)
-  ReactDOM.render(component, div)
+  return dialog(content, { closable: true })
 }
 
 const confirm = (content: string, onYes: () => void, onNo: () => void) => {
+  return dialog(content, { onYes, onNo, closable: true, actionable: true })
+}
+const modal = (content: ReactNode | ReactFragment) => {
+  return dialog(content, { closable: true })
+}
+
+interface InProps {
+  closable?: Boolean
+  actionable?: Boolean
+  onYes?: () => void
+  onNo?: () => void
+}
+
+const dialog = function (
+  content: string | ReactNode | ReactFragment,
+  props: InProps
+) {
+  const { onYes, onNo, actionable, closable } = props
   const destroy = () => {
     ReactDOM.render(React.cloneElement(component, { visible: false }), div)
     ReactDOM.unmountComponentAtNode(div)
     div.remove()
   }
   const yes = () => {
-    onYes()
-    destroy()
+    if (onYes) {
+      onYes()
+      destroy()
+    }
   }
 
   const no = () => {
-    onNo()
-    destroy()
+    if (onNo) {
+      onNo()
+      destroy()
+    }
   }
   const component = (
     <Dialog
       visible={true}
-      closable={true}
+      onClose={destroy}
       onOk={yes}
       onCancel={no}
-      onClose={destroy}
+      closable={closable || false}
+      actionable={actionable || false}
     >
-      {content}
-    </Dialog>
-  )
-  const div = document.createElement('div')
-  document.body.appendChild(div)
-  ReactDOM.render(component, div)
-}
-
-const modal = (content: ReactNode | ReactFragment) => {
-  const destroy = () => {
-    ReactDOM.render(React.cloneElement(component, { visible: false }), div)
-    ReactDOM.unmountComponentAtNode(div)
-    div.remove()
-  }
-  const component = (
-    <Dialog visible={true} onClose={destroy} closable={true} actionable={false}>
       {content}
     </Dialog>
   )
