@@ -32,7 +32,7 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
   const cancel: React.MouseEventHandler = (e) => {
     props.onCancel && props.onCancel(e)
   }
-  const x = props.visible ? (
+  const component = props.visible ? (
     <>
       <div className={sc('mask')} onClick={clickMask} />
       <div className={sc()}>
@@ -61,7 +61,7 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
     </>
   ) : null
 
-  return ReactDOM.createPortal(x, document.body)
+  return ReactDOM.createPortal(component, document.body)
 }
 
 Dialog.defaultProps = {
