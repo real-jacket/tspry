@@ -4,18 +4,34 @@ function classes(...names: (string | undefined)[]): string {
 
 export default classes
 
+interface ClassToggles {
+  [k: string]: Boolean
+}
+
 function scopedClassMaker(
   prefix: string
 ): (
-  name?: string,
-  more?: string | undefined | Array<string | undefined>
+  // {
+  //   '':true,
+  //   hasAside:false
+  // }
+  name?: string | ClassToggles,
+  more?: string | Array<string | undefined>
 ) => string {
-  return (name, more) => {
-    const _more = Array.isArray(more) ? more : [more]
-    return [[prefix, name].filter(Boolean).join('-'), ..._more]
+  return (name = '', more) =>
+    [
+      [prefix]
+        .concat(
+          Object.entries(name instanceof Object ? name : { [name]: name })
+            .filter((item) => item[1])
+            .map((item) => item[0])
+        )
+        .filter(Boolean)
+        .join('-'),
+    ]
+      .concat(more as Array<string>)
       .filter(Boolean)
       .join(' ')
-  }
 }
 
 export { scopedClassMaker }

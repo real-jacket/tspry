@@ -17,7 +17,7 @@ const Layout: React.FunctionComponent<Props> = (props) => {
     childArray.length && childArray.some((node) => node.type === Aside)
 
   return (
-    <div className={sc('', [className, hasAside ? 'hasAside' : ''])} {...rest}>
+    <div className={sc({ hasAside: Boolean(hasAside) }, className)} {...rest}>
       {children}
     </div>
   )
