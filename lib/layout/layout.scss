@@ -6,11 +6,7 @@
   width: 100%;
   height: 100%;
   &-hasAside {
-    display: flex;
     flex-direction: row;
-    border: 1px solid black;
-    width: 100%;
-    height: 100%;
   }
   &-content {
     flex-grow: 1;

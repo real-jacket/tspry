@@ -33,8 +33,10 @@ describe('scopedClassMaker', () => {
       expect(sc('a')).toEqual('ts-lay-a')
     })
     it('接受一个对象', function () {
-      expect(sc({ a: true, hasAside: false })).toEqual('ts-lay-a')
-      expect(sc({ a: true, hasAside: true })).toEqual('ts-lay-a-hasAside')
+      expect(sc({ '': true, hasAside: false })).toEqual('ts-lay')
+      expect(sc({ a: true, hasAside: true })).toEqual(
+        'ts-lay-a ts-lay-hasAside'
+      )
     })
     it('接受两个字符串', function () {
       expect(sc('a', 'b')).toEqual('ts-lay-a b')

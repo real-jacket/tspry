@@ -8,30 +8,16 @@ interface ClassToggles {
   [k: string]: Boolean
 }
 
-function scopedClassMaker(
-  prefix: string
-): (
-  // {
-  //   '':true,
-  //   hasAside:false
-  // }
-  name?: string | ClassToggles,
+const scopedClassMaker = (prefix: string) => (
+  name: string | ClassToggles = '',
   more?: string | Array<string | undefined>
-) => string {
-  return (name = '', more) =>
-    [
-      [prefix]
-        .concat(
-          Object.entries(name instanceof Object ? name : { [name]: name })
-            .filter((item) => item[1])
-            .map((item) => item[0])
-        )
-        .filter(Boolean)
-        .join('-'),
-    ]
-      .concat(more as Array<string>)
-      .filter(Boolean)
-      .join(' ')
-}
+) =>
+  Object.entries(name instanceof Object ? name : { [name]: name })
+    .filter((item) => item[1] !== false)
+    .map((item) => item[0])
+    .map((item) => [prefix, item].filter(Boolean).join('-'))
+    .concat(more as Array<string>)
+    .filter(Boolean)
+    .join(' ')
 
 export { scopedClassMaker }
