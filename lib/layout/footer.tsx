@@ -9,7 +9,7 @@ const Footer: React.FunctionComponent<Props> = (props) => {
   const { className, ...reset } = props
   return (
     <div className={sc('footer', className)} {...reset}>
-      footer
+      {props.children}
     </div>
   )
 }

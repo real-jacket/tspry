@@ -9,7 +9,7 @@ const Content: React.FunctionComponent<Props> = (props) => {
   const { className, ...reset } = props
   return (
     <div className={sc('content', className)} {...reset}>
-      content
+      {props.children}
     </div>
   )
 }

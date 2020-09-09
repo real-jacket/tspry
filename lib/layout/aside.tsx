@@ -9,7 +9,7 @@ const Aside: React.FunctionComponent<Props> = (props) => {
   const { className, ...reset } = props
   return (
     <div className={sc('aside', className)} {...reset}>
-      aside
+      {props.children}
     </div>
   )
 }

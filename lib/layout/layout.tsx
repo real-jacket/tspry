@@ -2,6 +2,9 @@ import React, { HTMLAttributes, ReactElement } from 'react'
 import { scopedClassMaker } from '../helpers/classes'
 import './layout.scss'
 import Aside from './aside'
+import Content from './content'
+import Footer from './footer'
+import Header from './header'
 
 const sc = scopedClassMaker('tspry-layout')
 
@@ -27,3 +30,5 @@ const Layout: React.FunctionComponent<Props> = (props) => {
 }
 
 export default Layout
+
+export { Layout, Aside,Content,Footer,Header }
