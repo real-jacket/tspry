@@ -5,6 +5,7 @@ import {
   Route,
   Link,
   Redirect,
+  NavLink,
 } from 'react-router-dom'
 import routes from './routes'
 import './style.scss'
@@ -31,20 +32,18 @@ export default function BasicExample() {
           <Layout className="content-wrapper">
             <Aside className="content-aside">
               <h2>组件</h2>
-              <ul>
-                <li>
-                  <Link to="/icon">Icon</Link>
-                </li>
-                <li>
-                  <Link to="/button">Button</Link>
-                </li>
-                <li>
-                  <Link to="/dialog">Dialog</Link>
-                </li>
-                <li>
-                  <Link to="/layout">Layout</Link>
-                </li>
-              </ul>
+              <NavLink to="/icon" activeClassName="active">
+                Icon
+              </NavLink>
+              <NavLink to="/button" activeClassName="active">
+                Button
+              </NavLink>
+              <NavLink to="/dialog" activeClassName="active">
+                Dialog
+              </NavLink>
+              <NavLink to="/layout" activeClassName="active">
+                Layout
+              </NavLink>
             </Aside>
             <Content className="content-content">
               <Switch>

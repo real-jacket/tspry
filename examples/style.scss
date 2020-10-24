@@ -54,6 +54,8 @@
     &-aside {
       max-width: 18%;
       border-right: 1px solid #f5f5f5;
+      display: flex;
+      flex-direction: column;
       h2,
       li {
         padding-left: 40px;
@@ -63,14 +65,26 @@
         display: flex;
         align-items: center;
         color: rgba(0, 0, 0, 0.85);
-        a {
-          display: block;
-          text-decoration: none;
-          color: inherit;
-        }
       }
-      li:hover {
-        color: #4cb6ff;
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+        padding-left: 40px;
+        padding-right: 16px;
+        margin: 4px 0 8px 0;
+        height: 40px;
+
+        &:hover {
+          color: #4cb6ff;
+        }
+
+        &.active {
+          color: #4cb6ff;
+          background-color: #e6f7ff;
+          border-right: 3px solid #1890ff;
+        }
       }
     }
     &-content {
