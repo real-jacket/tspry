@@ -6,6 +6,9 @@
 
 .body {
   display: flex;
+  .wrapper {
+    width: 100%;
+  }
   .sidebar {
     min-width: 200px;
   }
@@ -61,7 +64,7 @@
         padding-left: 40px;
         margin: 4px 0 8px 0;
         height: 40px;
-        width: 200px;
+        width: 280px;
         display: flex;
         align-items: center;
         color: rgba(0, 0, 0, 0.85);
@@ -89,6 +92,7 @@
     }
     &-content {
       padding-left: 64px;
+      padding-right: 170px;
     }
   }
 }

@@ -1,0 +1,45 @@
+$blue-lighten: #7dbcea;
+$blue: #3ba0e9;
+$blue-darken: #108ee9;
+
+h2 {
+  margin: 1.6em 0 0.6em;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+}
+
+.box-demo {
+  padding: 42px 24px;
+  border: 1px solid #f0f0f0;
+}
+
+.layout {
+  color: #ffffff;
+  width: 100%;
+  > * {
+    text-align: center;
+  }
+  .header {
+    min-height: 64px;
+    line-height: 64px;
+    background: $blue-lighten;
+  }
+
+  .aside {
+    background: $blue;
+    width: 20%;
+    line-height: 120px;
+  }
+
+  .content {
+    min-height: 120px;
+    line-height: 120px;
+    background: $blue-darken;
+  }
+
+  .footer {
+    background: $blue-lighten;
+    min-height: 64px;
+    line-height: 64px;
+  }
+}

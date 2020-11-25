@@ -4,43 +4,52 @@ import Content from '../../lib/layout/content'
 import Footer from '../../lib/layout/footer'
 import Header from '../../lib/layout/header'
 import Aside from '../../lib/layout/aside'
+import './layout.scss'
 
 const LayoutDemo: React.FunctionComponent = () => {
   return (
     <>
-      <h1>第一个例子</h1>
-      <Layout style={{ height: '600px', width: '800px' }}>
-        <Header />
-        <Content />
-        <Footer />
-      </Layout>
-      <h1>第二个例子</h1>
-      <Layout style={{ height: '600px', width: '800px' }}>
-        <Header />
-        <Layout>
-          <Aside />
-          <Content />
+      <h2>第一个例子</h2>
+      <div className="box-demo">
+        <Layout className="layout">
+          <Header className="header">header</Header>
+          <Content className="content">content</Content>
+          <Footer className="footer">footer</Footer>
         </Layout>
-        <Footer />
-      </Layout>
-      <h1>第三个例子</h1>
-      <Layout style={{ height: '600px', width: '800px' }}>
-        <Header />
-        <Layout>
-          <Content />
-          <Aside />
+      </div>
+      <h2>第二个例子</h2>
+      <div className="box-demo">
+        <Layout className="layout">
+          <Header className="header">header</Header>
+          <Layout>
+            <Aside className="aside">aside</Aside>
+            <Content className="content">content</Content>
+          </Layout>
+          <Footer className="footer">footer</Footer>
         </Layout>
-        <Footer />
-      </Layout>
-      <h1>第四个例子</h1>
-      <Layout style={{ height: '600px', width: '800px' }}>
-        <Aside />
-        <Layout>
-          <Header />
-          <Content />
-          <Footer />
+      </div>
+      <h2>第三个例子</h2>
+      <div className="box-demo">
+        <Layout className="layout">
+          <Header className="header">header</Header>
+          <Layout className="layout">
+            <Content className="content">content</Content>
+            <Aside className="aside">aside</Aside>
+          </Layout>
+          <Footer className="footer">footer</Footer>
         </Layout>
-      </Layout>
+      </div>
+      <h2>第四个例子</h2>
+      <div className="box-demo">
+        <Layout className="layout">
+          <Aside className="aside">aside</Aside>
+          <Layout className="layout">
+            <Header className="header">header</Header>
+            <Content className="content">content</Content>
+            <Footer className="footer">footer</Footer>
+          </Layout>
+        </Layout>
+      </div>
     </>
   )
 }
