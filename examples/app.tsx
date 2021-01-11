@@ -44,6 +44,9 @@ export default function BasicExample() {
               <NavLink to="/layout" activeClassName="active">
                 Layout
               </NavLink>
+              <NavLink to="/form" activeClassName="active">
+                Form
+              </NavLink>
             </Aside>
             <Content className="content-content">
               <Switch>
