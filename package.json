@@ -1,29 +1,25 @@
 {
-  "name": "tspry",
-  "version": "0.0.5",
-  "description": "",
-  "main": "dist/lib/index",
-  "types": "dist/lib/index",
-  "files": [
-    "dist"
+  "name": "tspry-root",
+  "workspaces": [
+    "packages"
   ],
+  "private": true,
   "scripts": {
-    "test": "jest --config jest.config.js",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
-    "build:doc": "cross-env NODE_ENV=production webpack --config webpack.config.doc.js",
-    "commit": "git-cz"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:real-jacket/tspry.git"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config site/webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config site/webpack.config.doc.js",
+    "commit": "git-cz",
+    "clean": "lerna clean && rm -rf node_modules"
   },
   "config": {
     "commitizen": {
       "path": "git-cz"
     }
   },
-  "keywords": [],
+  "keywords": [
+    "lerna",
+    "react",
+    "typescript"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -38,8 +34,9 @@
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.4",
     "@types/node": "^14.0.14",
-    "@types/react": "^16.9.41",
-    "@types/react-dom": "^16.9.8",
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-router": "^5.1.13",
     "@types/react-router-dom": "^5.1.5",
     "@types/react-test-renderer": "^16.9.2",
     "awesome-typescript-loader": "^5.2.1",
@@ -54,12 +51,13 @@
     "html-webpack-plugin": "^4.3.0",
     "jest": "^26.1.0",
     "jest-junit": "^11.1.0",
+    "lerna": "^3.22.1",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "prettier": "2.0.5",
     "react-router-dom": "^5.2.0",
     "react-test-renderer": "^16.13.1",
-    "sass-loader": "^9.0.2",
+    "sass-loader": "^10.1.1",
     "style-loader": "^1.2.1",
     "svg-sprite-loader": "^5.0.0",
     "svg-transform-loader": "^2.0.13",
@@ -73,7 +71,11 @@
     "webpack-merge": "^5.1.1"
   },
   "dependencies": {
-    "react": "17.0.0-rc.0",
-    "react-dom": "17.0.0-rc.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.0"
+  },
+  "resolutions": {
+    "@types/react": "^16"
   }
 }

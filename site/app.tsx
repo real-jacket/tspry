@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom'
 import routes from './routes'
 import './style.scss'
-import Layout, { Aside, Content, Header } from '../lib/layout/layout'
+import Layout, { Aside, Content, Header } from '../packages/layout/layout'
 
 export default function BasicExample() {
   return (

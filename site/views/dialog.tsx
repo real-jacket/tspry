@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Dialog, { alert, confirm, modal } from '../../lib/dialog/dialog'
+import { Dialog, alert, confirm, modal } from 'tspry'
 
 export default function Dashboard() {
   const [show1, setShow1] = useState(false)

@@ -3,26 +3,15 @@
     "declaration": true,
     "baseUrl": ".",
     "paths": {
-      "utils/*": [
-        "include/utils/*"
-      ],
-      "stylesheets": [
-        "stylesheets/"
-      ],
-      "examples": [
-        "examples/"
-      ]
+      "utils/*": ["include/utils/*"],
+      "stylesheets": ["stylesheets/"],
+      "examples": ["site"]
     },
-    "rootDirs": [
-      "include"
-    ],
-    "outDir": "dist",
+    "rootDirs": ["include"],
+    "outDir": "packages/dist",
     "module": "esnext",
     "target": "es5",
-    "lib": [
-      "es6",
-      "dom"
-    ],
+    "lib": ["es6", "dom"],
     "allowJs": true,
     "sourceMap": true,
     "jsx": "react",
@@ -39,20 +28,19 @@
     // "allowSyntheticDefaultImports": true,
     // 处理 模块默认导出导入的问题
     "esModuleInterop": true,
-    "noUnusedLocals": false,
+    "noUnusedLocals": false
   },
   "include": [
-    "example.tsx",
-    "lib/**/*",
-    "include/**/*",
-    "examples/**/*",
-    "types/**/*",
-    "test/**/*"
+    "packages/**/*",
+    "packages/lib/**/*",
+    "site/**/*",
+    "packages/types/**/*",
+    "packages/test/**/*"
   ],
   "exclude": [
     "node_modules",
     "build",
-    "dist",
+    "packages/dist",
     "scripts",
     "acceptance-tests",
     "webpack",

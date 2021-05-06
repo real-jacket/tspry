@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import Form, { Field, Rule, Error, Validator } from '../../lib/form/form'
+import { Form } from 'tspry'
+import { Field, Rule, Error, Validator } from 'tspry/form/form'
 
 const FormDemo: React.FunctionComponent = () => {
   const [formData, setFormData] = useState({

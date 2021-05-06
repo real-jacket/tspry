@@ -1,9 +1,5 @@
 import React from 'react'
-import Layout from '../../lib/layout/layout'
-import Content from '../../lib/layout/content'
-import Footer from '../../lib/layout/footer'
-import Header from '../../lib/layout/header'
-import Aside from '../../lib/layout/aside'
+import { Layout, Content, Footer, Header, Aside } from 'tspry'
 import './layout.scss'
 
 const LayoutDemo: React.FunctionComponent = () => {
